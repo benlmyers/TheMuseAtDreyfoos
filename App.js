@@ -40,7 +40,7 @@ const App = () => {
               <Text style={styles.sectionTitle}>Latest</Text>
 
               <View style={styles.articleContainer}>
-                <Image source={pic} style={{width: 50, height: 50}}/>
+                <Image source={testArticleIcon} style={styles.articleIcon}/>
                   <View style={styles.articleSubContainer}>
                     <Text style={styles.articleTitle}>Test article Title</Text>
                     <Text style={styles.articlePreview}>
@@ -58,7 +58,7 @@ const App = () => {
   );
 };
 
-const pic = {
+const testArticleIcon = {
   uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
 };
 
@@ -85,8 +85,14 @@ const styles = StyleSheet.create({
   },
   articleSubContainer: {
     padding: 2,
-    marginLeft: 5,
+    marginLeft: 7,
     flex: 1,
+  },
+  articleIcon: {
+    width: 55,
+    height: 55,
+    marginTop: 12,
+    borderRadius: 5,
   },
   title: {
     fontSize: 24,
@@ -111,7 +117,7 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
   articlePreview: {
-    marginTop: 2,
+    //marginTop: 2,
     fontSize: 14,
     fontWeight: '300',
     color: Colors.dark,
