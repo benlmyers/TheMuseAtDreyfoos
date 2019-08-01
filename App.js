@@ -32,9 +32,8 @@ const App = () => {
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.title}>THE MUSE</Text>
-              <Text style={styles.subtitle}>DREYFOOS SCHOOL OF THE ARTS</Text>
+            <View style={styles.headerContainer}>
+              <Image source={theMuse} style={{width: 150, height: 60}}/>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Latest</Text>
@@ -42,9 +41,9 @@ const App = () => {
               <View style={styles.articleContainer}>
                 <Image source={testArticleIcon} style={styles.articleIcon}/>
                   <View style={styles.articleSubContainer}>
-                    <Text style={styles.articleTitle}>Test article Title</Text>
+                    <Text style={styles.articleTitle}>Article Name</Text>
                     <Text style={styles.articlePreview}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
+                      This is the beginning of the article. It's a shortened version of the description. Let's read a bit more...
                     </Text>
                   </View>
               </View>
@@ -62,6 +61,10 @@ const testArticleIcon = {
   uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
 };
 
+const theMuse = {
+  uri: 'https://www.themuseatdreyfoos.com/wp-content/uploads/2019/07/IMG_1267.png'
+};
+
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
@@ -72,6 +75,12 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: Colors.white,
+  },
+  headerContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   sectionContainer: {
     marginTop: 32,
